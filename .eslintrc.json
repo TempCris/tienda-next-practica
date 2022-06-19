@@ -34,11 +34,21 @@
   "rules": {
     // Javascript
     "no-use-before-define": "off",
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/anchor-is-valid": "warn",
     "import/prefer-default-export": "off",
     // Typescript
+    "no-shadow": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-use-before-define": [
@@ -49,6 +59,15 @@
       "error",
       "ignorePackages",
       { "ts": "never", "tsx": "never" }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "_"
+      }
     ],
     "react/jsx-filename-extension": [
       1,

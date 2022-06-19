@@ -1,14 +1,7 @@
+/* eslint-disable require-jsdoc */
 // -------------------------------------------TYPES------------------------------------
-import {
-  UPDATE_PARAMS,
-  CHANGE_RESPONSIVE,
-  UPDATE_PATH,
-  UPDATE_LOADING
-} from '@Redux/appInfo/types';
-import { Action, ReducerState, ResponsiveData } from '@Redux/appInfo/customTypes';
-import { RandObj } from '@Declarations';
-
-// ------------------------------------------REDUCER-----------------------------------
+import { Cases } from '@Redux/appInfo/constants';
+import { Action, ReducerState, Colors } from '@Redux/appInfo/customTypes';
 
 // -------------------------------------------STATE------------------------------------
 const INITIAL_STATE: ReducerState = {
@@ -16,41 +9,57 @@ const INITIAL_STATE: ReducerState = {
   winSize: 'lg',
   isLoading: false,
   currentPath: '',
-  currentParams: {}
+  currentParams: '',
+  lessColors: getColors()!,
 };
 
 // ------------------------------------------REDUCER-----------------------------------
-const reducer = (state = INITIAL_STATE, action: Action) : ReducerState => {
+export function appInfoReducer(state = INITIAL_STATE, action: Action): ReducerState {
   const { type, payload } = action;
   switch (type) {
-    case CHANGE_RESPONSIVE:
+    case Cases.CHANGE_RESPONSIVE:
       return {
         ...state,
-        isMovil: (payload as ResponsiveData).isMovil,
-        winSize: (payload as ResponsiveData).winSize
+        isMovil: payload.isMovil,
+        winSize: payload.winSize,
       };
 
-    case UPDATE_PATH:
+    case Cases.UPDATE_PATH:
       return {
         ...state,
-        currentPath: <string>payload
+        currentPath: payload,
       };
 
-    case UPDATE_PARAMS:
+    case Cases.UPDATE_PARAMS:
       return {
         ...state,
-        currentParams: <RandObj>payload
+        currentParams: payload,
       };
 
-    case UPDATE_LOADING:
+    case Cases.UPDATE_LOADING:
       return {
         ...state,
-        isLoading: <boolean>payload
+        isLoading: payload,
       };
 
     default:
       return state;
   }
-};
+}
 
-export default reducer;
+// ---------------------------AUX METHODS
+
+function getColors() {
+  try {
+    let colors: Colors = JSON.parse(process?.env?.REACT_APP_LESS_COLORS as string);
+
+    colors = {
+      ...colors,
+      primary: colors?.['@colorPrimary'],
+      secondary: colors?.['@colorSecondary'],
+    };
+    return colors;
+  } catch (error) {
+    return undefined;
+  }
+}

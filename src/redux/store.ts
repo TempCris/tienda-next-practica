@@ -1,5 +1,5 @@
 import {
-  createStore, applyMiddleware, compose, Store, AnyAction
+  createStore, applyMiddleware, compose, Store, AnyAction,
 } from 'redux';
 import thunk from 'redux-thunk';
 import { createWrapper, MakeStore } from 'next-redux-wrapper';
