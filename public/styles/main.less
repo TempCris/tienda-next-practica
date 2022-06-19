@@ -1,73 +1,32 @@
+// ----------------------------------GLOBALS------------------------------------
+//-----------------
 
-//----------------------------------------------Nav-----------------------------------------------
-.nav-div{
-  width: 100%;
-  margin-bottom: 35px;
-}
-.to-home{
-  display: block;
-  margin: 10px auto 10px auto ;
-  text-align: center;
-  width: 170px;
-  color: @colorNavLogo;
-  font-size: 30px;
-  cursor: pointer;
-  span{
-    font-size: 14px;
-  }
-}
-.nav-btn{
-  width: 98%;
+// -------------------------------GlobalProvider------------------------------------
+//-----------------Navbar
+.Navbar{
   background-color: @colorNavButtons;
-  margin: 10px auto 10px auto ;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  color: @colorNavNavButtonsText;
-  font-size: 16px;
-  cursor: pointer;
-  &:hover{
-    background-color: @colorNavButtonsLigth;
-  }
+  width: 100%;
 }
-.nav-border{
-  outline: @colorNavNavButtonsText solid 1px;
+//-----------------Footer
+.Footer{
+  background-color: @colorNavButtons;
+  width: 100%;
 }
-/*----------------------------------------HOME-------------------------------------*/
-.home-container{
-  text-align: center;
+//-----------------
+
+// ----------------------------------cPages------------------------------------
+//-----------------HomeCont
+.HomeCont{
+  border: 1px solid @colorPrimary;
+  width: 96%;
+  margin: 30px auto;
+  padding: 10px;
 }
-.home-container img{
-  border-radius: 50%;
+//-----------------Error404Cont
+.Error404Cont{
+  border: 1px solid @colorPrimary;
+  width: 96%;
+  margin: 30px auto;
+  padding: 10px;
 }
-.home-container h1{
-  color: @colorPrimary;
-}
-/*----------------------------------------ANTD-EX-------------------------------------*/
-.antdEx-container{
-  width: 94%;
-  margin: 0px auto 0px auto;
-  padding: 25px;
-  background-color: @colorTransparentGrey;
-  button{
-    margin: 30px;
-  }
-}
-/*----------------------------------------REDUX-EX-------------------------------------*/
-.reduxEx-container{
-  width: 94%;
-  margin: 0px auto 0px auto;
-  padding: 25px;
-  background-color: @colorTransparentGrey;
-  p{
-    color: @colorPrimaryText;
-    strong{
-      color: @colorSecundaryText;
-    }
-  }
-  pre{
-    color: @colorSecundaryText;
-  }
-}
+//-----------------

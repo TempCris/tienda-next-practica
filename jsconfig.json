@@ -3,17 +3,18 @@
     "baseUrl": "./",
     "module": "ESNext",
     "paths": {
-      "Cont/*": ["./containers/*"],
-      "Pages/*": ["./pages/*"],
-      "CComps/*": ["./commonComps/*"],
-      "Utils/*": ["./cUtils/*"],
-      "Others/*": ["./others/*"],
-      "Requests/*": ["./requests/*"],
-      "AppConfig/*": ["./appConfig/*"],
-      "@Redux/*": ["./redux/*"],
-      "@Declarations": ["./declarations.d.ts"],
-      "Images/*": ["./public/images/*"],
-      "Styles/*": ["./public/styles/*"]
+      "Pages/*": ["src/pages/*"],
+      "CComps/*": ["src/commonComps/*"],
+      "Cont/*": ["src/containers/*"],
+      "GlobalProvider/*": ["src/GlobalProvider/*"],
+      "Utils/*": ["src/cUtils/*"],
+      "Others/*": ["src/others/*"],
+      "Requests/*": ["src/requests/*"],
+      "AppConfig/*": ["src/appConfig/*"],
+      "@Redux/*": ["src/redux/*"],
+      "@Declarations": ["src/declarations.d.ts"],
+      "Images/*": ["public/images/*"],
+      "Styles/*": ["public/styles/*"]
     }
   }
 }

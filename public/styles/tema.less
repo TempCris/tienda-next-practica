@@ -1,4 +1,3 @@
-/*----------------------------------------VARIABLES-------------------------------------*/
 @font-face {
   font-family: 'Questrial';
   src: url('/fonts/Questrial/Questrial-Regular.ttf');
@@ -6,69 +5,44 @@
   font-style: normal;
 }
 
-/*----------------------------------------TEMA-------------------------------------*/
-button, input[type="submit"], input[type="reset"] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  }
+// default button css off
+// button, input[type="submit"], input[type="reset"] {
+//   background: none;
+//   color: inherit;
+//   border: none;
+//   padding: 0;
+//   font: inherit;
+//   cursor: pointer;
+//   outline: inherit;
+// }
 
-  html,
-  body {
-    background-color: @backgroundFallBack1;
-    background: @backgroundImage1 no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Questrial';
-    margin: 0px;
-    padding: 0px;
-  }
-  p{
-    color: @colorSecundaryText;
-    font-size: 18px;
-  span{
-    color: @colorPrimaryText;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0px 3px 0px 3px;
-  }
-  }
-  /*-------------------------------------UTILITY STYLES----------------------------------*/
-  .center-block{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-  .col-vertical-align{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  }
-  .text-green{
-  color: @simpleColorGreen;
-  }
-  .text-yellow{
-  color: @simpleColorYellow
-  }
-  .error-mid-mssg{
-  color: @colorError;
-  font-size: 18px;
-  }
-  .modal-title{
-  color: @colorError;
-  }
-  .modal-message{
-  font-size: 18px;
-  }
-  .container94{
-  width: 94%;
-  margin: 10px 3% 10px 3%;
-  
-  }
+body {
+margin: 0px;
+padding: 0px;
+// Font
+font-family: 'Questrial';
+color: @colorPrimaryText;
+}
+
+
+p{
+color: @colorPrimaryText;
+span{
+  color: @colorThreeText;
+}
+}
+
+.center-block{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.text-green{
+color: @simpleColorGreen;
+}
+.text-yellow{
+color: @simpleColorYellow
+}
+

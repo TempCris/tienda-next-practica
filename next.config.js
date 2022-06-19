@@ -4,6 +4,7 @@ const withLess = require("next-with-less");
 const lessToJS = require("less-vars-to-js");
 const fs = require("fs");
 const path = require("path");
+const { NEXT_PUBLIC_APP_NAME } = require("./config/envs/NEXT_PUBLIC_APP_NAME");
 
 // Where your antd-custom.less file lives
 const lessColorsPath =path.resolve(__dirname, "./public/styles/colors.less")
@@ -17,5 +18,7 @@ const lessOptions = {
 };
 
 module.exports = withPlugins( [withLess, lessOptions],{
-  // webpack5: false,
+  env: {
+    NEXT_PUBLIC_APP_NAME: NEXT_PUBLIC_APP_NAME(),
+  }
 })
