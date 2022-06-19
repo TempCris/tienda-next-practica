@@ -17,30 +17,53 @@
     "noEmitOnError": true, /* Do not emit outputs if compile errors. */
     "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
     "strictNullChecks": true, /* Enable strict null checks. */
-    "strictFunctionTypes": true, /* Enable strict checking of function types. */// "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    "strictFunctionTypes": true, /* Enable strict checking of function types. */ // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
     // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
-    "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */// "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
+    "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */ // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "resolveJsonModule": true,
     "paths": {
-      "Cont/*": ["./containers/*"],
-      "Pages/*": ["./pages/*"],
-      "CComps/*": ["./commonComps/*"],
-      "Utils/*": ["./cUtils/*"],
-      "Others/*": ["./others/*"],
-      "Requests/*": ["./requests/*"],
-      "AppConfig/*": ["./appConfig/*"],
-      "@Redux/*": ["./redux/*"],
-      "@Declarations": ["./declarations.d.ts"],
-      "Images/*": ["./public/images/*"],
-      "Styles/*": ["./public/styles/*"]
+      "Cont/*": [
+        "./containers/*"
+      ],
+      "Pages/*": [
+        "./pages/*"
+      ],
+      "CComps/*": [
+        "./commonComps/*"
+      ],
+      "Utils/*": [
+        "./cUtils/*"
+      ],
+      "Others/*": [
+        "./others/*"
+      ],
+      "Requests/*": [
+        "./requests/*"
+      ],
+      "AppConfig/*": [
+        "./appConfig/*"
+      ],
+      "@Redux/*": [
+        "./redux/*"
+      ],
+      "@Declarations": [
+        "./declarations.d.ts"
+      ],
+      "Images/*": [
+        "./public/images/*"
+      ],
+      "Styles/*": [
+        "./public/styles/*"
+      ]
     }
     // "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
     // "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
     ,
     "allowJs": true,
-    "strict": false
+    "strict": true,
+    "incremental": true
   },
   "exclude": [
     "node_modules",

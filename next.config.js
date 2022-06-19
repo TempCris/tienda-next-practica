@@ -1,27 +1,21 @@
 /* eslint-disable */
 const withPlugins = require("next-compose-plugins");
-const withLess = require("@zeit/next-less");
+const withLess = require("next-with-less");
 const lessToJS = require("less-vars-to-js");
 const fs = require("fs");
 const path = require("path");
 
 // Where your antd-custom.less file lives
-const themeVariables = lessToJS(
-  fs.readFileSync(path.resolve(__dirname, "./public/styles/colors.less"), "utf8")
-);
+const lessColorsPath =path.resolve(__dirname, "./public/styles/colors.less")
+const themeVariables = lessToJS(fs.readFileSync(lessColorsPath, "utf8"));
 
-// fix: prevents error when .less files are required by node
-if (typeof require !== "undefined") {
-  require.extensions[".less"] = file => {};
-}
-
-const lessStuff = withLess({
+console.log(themeVariables);
+const lessOptions = {
   lessLoaderOptions: {
-    javascriptEnabled: true,
-    modifyVars: themeVariables // make your antd custom effective
+    //additionalData: (content) => `${content}\n\n@import '${lessColorsPath}';`,
   }
-});
+};
 
-module.exports = withPlugins( [lessStuff],{
-  webpack5: false,
+module.exports = withPlugins( [withLess, lessOptions],{
+  // webpack5: false,
 })
