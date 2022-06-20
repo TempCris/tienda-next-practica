@@ -23,7 +23,7 @@ exports.NEXT_PUBLIC_APP_NAME = function NEXT_PUBLIC_APP_NAME() {
  */
 exports.NEXT_PUBLIC_LESS_COLORS = function NEXT_PUBLIC_LESS_COLORS() {
   try {
-    const colorsFile = fs.readFileSync(path.join(__dirname, './public/styles/colors.less'), 'utf8');
+    const colorsFile = fs.readFileSync(path.join(__dirname, '../public/styles/colors.less'), 'utf8');
     const themeVariables = JSON.stringify(lessToJS(colorsFile));
     return themeVariables;
   } catch (error) {
