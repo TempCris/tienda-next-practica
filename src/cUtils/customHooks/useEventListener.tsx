@@ -1,4 +1,6 @@
-import { ReactElement, RefObject, useEffect, useRef } from 'react';
+import {
+  ReactElement, RefObject, useEffect, useRef,
+} from 'react';
 
 // See: https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
@@ -27,7 +29,7 @@ function useEventListener<
   handler: (event: WindowEventMap[KW] | HTMLElementEventMap[KH] | Event) => void,
   element?: RefObject<T>,
 ) {
-  // Create a ref that stores handler
+  // Crear una referencia que almacene el controlador
   const savedHandler = useRef(handler);
 
   useIsomorphicLayoutEffect(() => {
@@ -35,18 +37,18 @@ function useEventListener<
   }, [handler]);
 
   useEffect(() => {
-    // Define the listening target
+    // Definir el objetivo de escucha
     const targetElement: T | Window = element?.current || window;
     if (!(targetElement && targetElement.addEventListener)) {
       return;
     }
 
-    // Create event listener that calls handler function stored in ref
+    // Cree un detector de eventos que llame a la función del controlador almacenada en ref
     const eventListener: typeof handler = (event) => savedHandler.current(event);
 
     targetElement.addEventListener(eventName, eventListener);
 
-    // Remove event listener on cleanup
+    // Eliminar el event listener en la limpieza
     return () => {
       targetElement.removeEventListener(eventName, eventListener);
     };
@@ -56,11 +58,11 @@ function useEventListener<
 export default useEventListener;
 
 /**
- * React component example of using useEventListener.
+ * Ejemplo de componente React del uso de useEventListener.
  * @returns {ReactElement}
  */
 export function Example(): ReactElement {
-  // Define button ref
+  //  Definir referencia de botón
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -72,11 +74,11 @@ export function Example(): ReactElement {
     console.log('button clicked!', event);
   };
 
-  // example with window based event
+  // ejemplo con evento basado en ventana
 
   useEventListener('scroll', onScroll);
 
-  // example with element based event
+  // ejemplo con evento basado en elementos
 
   useEventListener('click', onClick, buttonRef);
 

@@ -8,7 +8,7 @@ interface Props {
 
 /**
  * Display Component: Do something
- * @returns {ReactElement}
+ * @returns {ReactElement} ReactElement
  */
 export function Display({ id }: Props): ReactElement {
   // -----------------------CONSTS, HOOKS, STATES
@@ -35,10 +35,14 @@ export function Display({ id }: Props): ReactElement {
   return (
     <div>
       <p>
-        First-render: <span>{first}</span>
+        First-render:
+        {' '}
+        <span>{first}</span>
       </p>
       <p>
-        Re-render: <span>{re}</span>
+        Re-render:
+        {' '}
+        <span>{re}</span>
       </p>
       <button type="button" onClick={clearCount}>
         Limpiar

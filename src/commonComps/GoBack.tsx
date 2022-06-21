@@ -2,7 +2,11 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
 
-// ----------------------------------------COMPONENT----------------------------------------
+/**
+ * LoadingFullScreen Component: Componente de boton para regresar
+ * a la pagina anterior
+ * @returns {ReactElement} ReactElement
+ */
 export default function GoBack(): ReactElement {
   return (
     <section>
@@ -12,6 +16,5 @@ export default function GoBack(): ReactElement {
         </Link>
       </h2>
     </section>
-
   );
 }

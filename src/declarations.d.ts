@@ -1,3 +1,4 @@
+// ---Dependency´s
 import { AxiosResponse, AxiosError } from 'axios';
 
 export declare global {

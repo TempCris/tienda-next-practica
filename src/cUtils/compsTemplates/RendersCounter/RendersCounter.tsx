@@ -1,5 +1,7 @@
 // ---Dependencies
-import { ReactElement, ReactNode, useEffect, useRef } from 'react';
+import {
+  ReactElement, ReactNode, useEffect, useRef,
+} from 'react';
 import { Display } from './Display/Display';
 
 interface Props {
@@ -27,8 +29,8 @@ export const justReadFirst = function (id: string): number {
   }
 };
 /**
- * RendersCounter Component: Do something
- * @returns {ReactElement}
+ * RendersCounter Component: Contador de Renders
+ * @returns {ReactElement} ReactElement
  */
 export function RendersCounter({ id, children }: Props): ReactElement {
   // -----------------------CONSTS, HOOKS, STATES

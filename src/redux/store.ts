@@ -1,3 +1,4 @@
+// ---Dependency´s
 import {
   createStore, applyMiddleware, compose, Store, AnyAction,
 } from 'redux';

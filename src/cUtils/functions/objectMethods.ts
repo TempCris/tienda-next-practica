@@ -1,7 +1,8 @@
 import { RandObj } from '@Declarations';
 
 /**
- * Recibe un objeto y un array con nombres, retorna un nuevo objeto sin las propiedades que coincidan con el array de nombres
+ * Recibe un objeto y un array con nombres, retorna un nuevo objeto sin
+ * las propiedades que coincidan con el array de nombres
  * @param {RandObj} RandObj someObj: Objeto con propiedades
  * @param {string[]} string[] args: Array de nombres a ignorar
  * @returns {RandObj} RandObj
