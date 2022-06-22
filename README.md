@@ -3,7 +3,7 @@
 ### Arquitectura y flujo de datos
 
 Se aprovecha la estructura de enrutamiento de **Next** para facilitar la creacion de rutas para la aplicacion 
-se hace en el src/pages, se puede hacer una mejor observacion en el siguente diagrama: [Draw io diagram](https://drive.google.com/file/d/1OV07H-aETQs1GfsN-ETbOQ4il0z41abx/view?usp=sharing)
+se hace en el src/pages, se puede hacer una mejor observacion en el siguente diagrama: [Draw io diagram](https://drive.google.com/file/d/1sLBASFAXwvOUGnKKaioD0sbLFhvzKlO1/view?usp=sharing)
 
 ### Herramientas y tecnologías utilizadas.
 
