@@ -1,9 +1,9 @@
 - Repositorio: [next-react-app](https://bitbucket.org/steve-barquet/next-react-app/src/master/)
 
 ### Architecture and data flow
--
--
--
+
+Se aprovecha la estructura de enrutamiento de **Next** para facilitar la creacion de rutas para la aplicacion 
+se hace en el src/pages, se puede hacer una mejor observacion en el siguente diagrama: [Draw io diagram](https://drive.google.com/file/d/1OV07H-aETQs1GfsN-ETbOQ4il0z41abx/view?usp=sharing)
 
 ### Tools and technologies used
 
@@ -36,11 +36,6 @@ $ npm i
 ```
 $ npm run dev
 ```
-
-### Recomendations to review
--
--
--
 
 ### Requirements (production in docker)
 
