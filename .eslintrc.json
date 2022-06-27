@@ -6,7 +6,8 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -16,7 +17,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "eslint-plugin-import"],
+  "plugins": ["react", "@typescript-eslint", "eslint-plugin-import", "prettier"],
   "settings": {
     "react": {
       "createClass": "createReactClass", // Regex for Component Factory to use,
@@ -32,6 +33,9 @@
     }
   },
   "rules": {
+    "prettier/prettier": "warn",
+    // Styles
+    "quotes": ["warn", "single", { "avoidEscape": true }],
     // Javascript
     "no-use-before-define": "off",
     "comma-dangle": [
@@ -55,11 +59,7 @@
       "error",
       { "functions": false, "classes": true, "variables": true }
     ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      { "ts": "never", "tsx": "never" }
-    ],
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
@@ -69,9 +69,6 @@
         "argsIgnorePattern": "_"
       }
     ],
-    "react/jsx-filename-extension": [
-      1,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
   }
 }
