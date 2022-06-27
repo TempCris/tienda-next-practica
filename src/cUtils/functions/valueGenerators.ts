@@ -1,6 +1,6 @@
 /**
- * Generates a random string of the indicated length
- * @param {number} length Length of the randomString
+ * Genera una cadena aleatoria de la longitud indicada
+ * @param {number} length Longitud de la randomString
  * @returns {string}
  */
 function randomString(length: number): string {
@@ -13,9 +13,10 @@ function randomString(length: number): string {
 }
 
 /**
- * Generates a random string of the indicated length with the indicated list of characters given in a string
- * @param {number} length Length of the randomString
- * @param {string} characters list of characters
+ * Genera una cadena aleatoria de la longitud indicada con la lista indicada
+ * de caracteres dados en una cadena
+ * @param {number} length Longitud del randomString
+ * @param {string} characters lista de characters
  * @returns {string}
  */
 function randomStringCustom(length: number, characters: string): string {
@@ -27,8 +28,8 @@ function randomStringCustom(length: number, characters: string): string {
 }
 
 /**
- * Returns a random word from a given array of words
- * @param {string[]} words array of strings (words)
+ * Devuelve una palabra aleatoria de una matriz dada de palabras
+ * @param {string[]} words una cadena única (words)
  * @returns {string}
  */
 function randomWord(words: string[]): string {
@@ -36,8 +37,8 @@ function randomWord(words: string[]): string {
 }
 
 /**
- * Generates a random and unique string
- * @returns {string} a unique string
+ * Genera una cadena aleatoria y única.
+ * @returns {string} una cadena única
  */
 function uniqueString(): string {
   const uniqueKey = new Date().getDate();

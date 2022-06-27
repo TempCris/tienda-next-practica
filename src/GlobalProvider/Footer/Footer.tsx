@@ -2,8 +2,8 @@
 import { ReactElement } from 'react';
 
 /**
- * Navbar Component: Ejemplo de navbar para la aplicación
- * @returns {ReactElement}
+ * Navbar Component: Ejemplo de Footer para la aplicación
+ * @returns {ReactElement} ReactElement
  */
 export function Footer(): ReactElement {
   // -----------------------RENDER

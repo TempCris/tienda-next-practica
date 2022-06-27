@@ -2,11 +2,14 @@
 import { ReactElement } from 'react';
 import { SettingFilled } from '@ant-design/icons';
 
-// ------------------------------------------ TYPES-----------------------------------------
 interface Props {
   isLoading: boolean;
 }
-// ------------------------------------------ COMPONENT-----------------------------------------
+/**
+ * LoadingFullScreen Component: Componente que se muestras mientras se
+ * lleva acabo la carga del componete a renderear
+ * @returns {ReactElement} ReactElement
+ */
 function LoadingFullScreen(props: Props): ReactElement | null {
   const { isLoading } = props;
   if (isLoading) {
