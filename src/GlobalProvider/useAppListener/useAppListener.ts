@@ -1,3 +1,4 @@
+import { useRouteListen } from './useRouteListen/useRouteListen';
 import { useScreenBreakpoints } from './useScreenBreakpoints/useScreenBreakpoints';
 
 /**
@@ -6,5 +7,5 @@ import { useScreenBreakpoints } from './useScreenBreakpoints/useScreenBreakpoint
  */
 export function useAppListener(): void {
   useScreenBreakpoints();
-  // useRouteListen();
+  useRouteListen();
 }

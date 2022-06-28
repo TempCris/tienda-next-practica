@@ -1,7 +1,5 @@
 // ---Dependency´s
-import {
-  createStore, applyMiddleware, compose, Store, AnyAction,
-} from 'redux';
+import { createStore, applyMiddleware, compose, Store, AnyAction } from 'redux';
 import thunk from 'redux-thunk';
 import { createWrapper, MakeStore } from 'next-redux-wrapper';
 import rootReducer from '@Redux/globalReducers';
