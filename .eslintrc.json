@@ -34,6 +34,18 @@
   },
   "rules": {
     "prettier/prettier": "warn",
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": false,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ],
     // Styles
     "quotes": ["warn", "single", { "avoidEscape": true }],
     // Javascript
