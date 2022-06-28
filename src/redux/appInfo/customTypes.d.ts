@@ -1,5 +1,6 @@
 // ---TYPES
 import { Cases } from '@Redux/appInfo/constants';
+import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { CSSProperties } from 'react';
 
 // ---------------DATA STRUCTURE ---------------
@@ -18,12 +19,16 @@ export interface UpdateBool {
   payload: boolean;
 }
 export interface UpdateString {
-  type: Cases.UPDATE_PATH | Cases.UPDATE_PARAMS;
+  type: Cases.UPDATE_PATH;
   payload: string;
 }
 export interface UpdateResponsive {
   type: Cases.CHANGE_RESPONSIVE;
   payload: ResponsiveData;
+}
+export interface UpdateQuery {
+  type: Cases.UPDATE_PARAMS;
+  payload: NextParsedUrlQuery;
 }
 // ----------------- ACTION -----------------
 export type Action = UpdateBool | UpdateString | UpdateResponsive;
@@ -31,6 +36,6 @@ export type Action = UpdateBool | UpdateString | UpdateResponsive;
 export interface ReducerState extends ResponsiveData {
   isLoading: boolean;
   currentPath: string;
-  currentParams: string;
+  currentParams: NextParsedUrlQuery;
   lessColors: Colors;
 }

@@ -3,7 +3,12 @@
 import { Cases } from '@Redux/appInfo/constants';
 // ---TYPES
 import { Dispatch } from 'redux';
-import { UpdateResponsive, UpdateString, UpdateBool } from '@Redux/appInfo/customTypes';
+import {
+  UpdateResponsive,
+  UpdateString,
+  UpdateBool,
+  UpdateQuery,
+} from '@Redux/appInfo/customTypes';
 
 // -------------------------------------------ACTIONS------------------------------------
 function updateResponsive(data: UpdateResponsive['payload']) {
@@ -26,9 +31,9 @@ function updatePath(data: UpdateString['payload']) {
   };
 }
 
-function updateParam(data: UpdateString['payload']) {
+function updateParam(data: UpdateQuery['payload']) {
   return (dispatch: Dispatch): void => {
-    const action: UpdateString = {
+    const action: UpdateQuery = {
       type: Cases.UPDATE_PARAMS,
       payload: data,
     };
